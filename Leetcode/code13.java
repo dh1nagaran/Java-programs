@@ -1,0 +1,18 @@
+import java.util.*;
+class excel
+{
+	public static void main(String[] args)
+	{
+		int n=701;
+		int data=(n/26);
+		int data2=n-(data*26);
+		System.out.println(data);
+		System.out.println(n-(data*26));
+		System.out.println(data+64);
+		String s=Character.toString((char)data+64);
+		s+=Character.toString((char)data2+64);
+		System.out.println(s);
+	}
+	
+	
+}
