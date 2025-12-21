@@ -1,0 +1,19 @@
+import java.util.*;
+class avg
+{
+	public static void main(String[] args)
+	{
+		int a[]={1, 2, 3, 4, 5};
+		int sum=0;
+		int count=0;
+		int avg=0;
+		for(int i=0;i<a.length;i++)
+		{
+			count++;
+			sum+=a[i];
+		}
+		avg=sum/count;
+		System.out.println(avg);
+		
+	}
+}

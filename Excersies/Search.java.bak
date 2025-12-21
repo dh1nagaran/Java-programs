@@ -1,0 +1,27 @@
+import java.util.*;
+class search
+{
+	public static void main(String[] args)
+	{
+		int a[]={10, 20, 30, 40, 50};
+		Scanner sc =new Scanner(System.in);
+		System.out.println(Arrays.toString(a));
+		System.out.println("Search the number:");
+		int num=sc.nextInt();
+		 int pos=1;
+		 int ind=0;
+		 for(int i=0;i<a.length;i++)
+		{
+			 if(a[i]==num)
+			{
+				 ind=i;
+			}
+			 
+		}
+		pos=ind+1;
+		System.out.println("Index:"+ind);
+		System.out.println("Postion:"+pos);
+		
+		 
+	}
+}

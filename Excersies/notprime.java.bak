@@ -1,0 +1,38 @@
+import java.util.*;
+class nonprime
+{
+	public static void main(String[] args)
+	{
+		int arr[]={3, 12, 21, 11};
+		for(int i=0;i<arr.length;i++)
+		{
+			boolean data=false;
+			data=solve(arr[i]);
+			if(data)
+			{
+				System.out.println(arr[i]+"- Prime");
+			}
+			else
+			{
+				System.out.println(arr[i]+"- Not a Prime");
+			}
+			
+		}
+		
+	}
+	public static boolean solve(int a)
+		{
+			if(a<1)
+				return false;
+			if(a==2)
+				return true;
+			if(a%2==0)
+				return false;
+			for(int i=3;i*i<=a;i+=2)
+			{
+				if(a%i==0)
+					return false;
+			}
+			return true;
+		}
+}

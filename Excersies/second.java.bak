@@ -1,0 +1,30 @@
+import java.util.*;
+class second
+{
+	public static void main(String[] args)
+	{
+		int a[]={10, 20, 5, 2, 30};
+		int n=a[0];
+		for(int i=0;i<a.length;i++)
+		{
+			if(n>a[i])
+			{
+				n=a[i];	
+			}
+		}
+		int sol=solve(n,a);
+		System.out.println(sol);
+	}
+	public static int solve(int n,int[] a)
+	{
+		
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]>n && a[i]<a[0])
+			{
+				n=a[i]
+			}
+		}
+		return n;
+	}
+}

@@ -1,0 +1,55 @@
+import java.util.*;
+class unique
+{
+	public static void main(String[] args)
+	{
+		int a[]={10, 20, 40, 20, 10};
+		int repeat=rept(a);
+		int b[]=new int[a.length-repeat];
+		b=uniq(a,b);
+		System.out.println(Arrays.toString(b));
+		
+	}
+	public static int rept(int a[])
+	{
+		int n=a.length;
+		int count=0;
+		Arrays.sort(a);
+		for(int i=0;i<a.length;i++)
+		{
+			int count2=0;
+			for(int j=i;j<a.length;j++)
+			{
+				if(a[i]==a[j])
+				{
+					count2++;
+					
+				}	
+			}
+			if(count2>1)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	public static int[] uniq(int a[],int b[])
+	{
+		Arrays.sort(a);
+		int count=0;
+		for(int i=1;i<a.length;i++)
+		{
+			if(a[i-1]!=a[i])
+			{
+				a[i]=a[i-1];
+			}	
+			
+		}
+		for(int j=0;j<b.length;j++)
+		{
+			b[j]=a[j];
+		}
+		return b;
+		
+	}
+}

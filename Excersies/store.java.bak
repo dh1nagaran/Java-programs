@@ -1,0 +1,18 @@
+import java.util.*;
+class store
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the array elements:");
+		int num=sc.nextInt();
+		int arr[]=new int[num];
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("Enter array value:");
+			a[i]=sc.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		
+	}
+}

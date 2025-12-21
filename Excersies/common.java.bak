@@ -1,0 +1,31 @@
+import java.util.*;
+class common
+{
+	public static void main(String[] args)
+	{
+		int a[]={10, 20, 30, 40, 50};
+		int b[]= {10, 30, 60, 50, 70};
+		for(int i=0;i<a.length;i++)
+		{
+			boolean data=false;
+			for(int j=0;j<b.length;j++)
+			{
+				if(a[i]==b[j])
+				{
+					data=true;
+					break;
+				}
+					
+				else
+				{
+					data=false;
+				}
+					
+			}
+			if(data)
+			{
+				System.out.print("\t"+a[i]);
+			}	
+		}
+	}
+}
