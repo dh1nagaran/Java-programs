@@ -8,7 +8,7 @@ class code
 		System.out.println(Integer.toBinaryString(n));
 		String data=Integer.toBinaryString(n);
 		String data2=String.format("%32s", data).replaceAll(" ", "0");
-		System.out.println(data);s
+		System.out.println(data);
 		String neww="";
 		int i=data2.length()-1;
 		while(i>=0)
@@ -19,4 +19,5 @@ class code
 		int num=Integer.parseInt(neww,2);
 		System.out.println(num);
 	}
+
 }
