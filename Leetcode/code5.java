@@ -1,47 +1,48 @@
 import java.util.*;
-class long
+class code5
 {
 	public static void main(String[] args)
 	{
-		String s="whdqcudjpisufnrtsyupwtnnbsvfptrcgvobbjglmpynebblpigaflpbezjvjgbmofejyjssdhbgghgrhzuplbeptpaecfdanhlylgusptlgobkqnulxvnwuzwauewcplnvcwowmbxxnhsdmgxtvbfgnuqdpxennqglgmspbagvmjcmzmbsuacxlqfxjggrwsnbblnnwisvmpwwhomyjylbtedzrptejjsaiqzprnadkjxeqfdpkddmbzokkegtypxaafodjdwirynzurzkjzrkufsokhcdkajwmqvhcbzcnysrbsfxhfvtodqabvbuosxtonbpmgoemcgkudandrioncjigbyizekiakmrfjvezuzddjxqyevyenuebfwugqelxwpirsoyixowcmtgosuggrkdciehktojageynqkazsqxraimeopcsjxcdtzhlbvtlvzytgblwkmbfwmggrkpioeofkrmfdgfwknrbaimhefpzckrzwdvddhdqujffwvtvfyjlimkljrsnnhudyejcrtrwvtsbkxaplchgbikscfcbhovlepdojmqybzhbiionyjxqsmquehkhzdiawfxunguhqhkxqdiiwsbuhosebxrpcstpklukjcsnnzpbylzaoyrmyjatuovmaqiwfdfwyhugbeehdzeozdrvcvghekusiahfxhlzclhbegdnvkzeoafodnqbtanfwixjzirnoaiqamjgkcapeopbzbgtxsjhqurbpbuduqjziznblrhxbydxsmtjdfeepntijqpkuwmqezkhnkwbvwgnkxmkyhlbfuwaslmjzlhocsgtoujabbexvxweigplmlewumcone";
+		int i=0;
+		int j=0;
+		String s="a";
 		String data="";
 		String ans="";
-		int last=0;
-		int first=last;
-		while(first<s.length())
+		while(i<s.length()-1)
 		{
-			if(last>=0 && last<s.length())
+			data=s.substring(i,j+1);
+			if((data.charAt(0)==data.charAt(data.length()-1)))
 			{
-				data+=s.charAt(last);
-				if(s.charAt(first)==s.charAt(last) && data.length()>ans.length())
-                {
-                    if(check(data))
-                    {
-                        ans=data;
-                    }
-                }	
+				if(check(data))
+				{
+					ans=ans.length()<data.length()?data:ans;
+				}
+				
 			}
-			last++;
-			if(last==s.length()-1)
+		
+			if(j==s.length()-1)
 			{
-				first++;
-				last=first;
+				i++;
+				j=i-1;
 				data="";
 			}
+				j++;
+			
 		}
 		System.out.println(ans);
 	}
-	public static boolean check(String s)
+	public static boolean check(String data)
 	{
-		String d="";
-		for(int i=s.length()-1;i>=0;i--)
+		int i=0;
+		int j=data.length()-1;
+		while(i<j)
 		{
-			d+=s.charAt(i);
+			if(data.charAt(i)!=data.charAt(j))
+				return false;
+			i++;
+			j--;
 		}
-		if(d.equals(s))
-			return true;
 		
-		return false;
+		return true;
 	}
-	
 }
