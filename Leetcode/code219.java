@@ -1,37 +1,16 @@
-import java.util.*;
-class code
-{
-	public static void main(String[] args)
-	{
-		boolean data=false;
-	int nums[]={1,2,3,1,2,3};
-	int k=2;
-	int i=0;
-    int j=i+1;
-      while(i<nums.length)
-      {
-		  System.out.println(i);
-		  System.out.println(j);
-		 if(j<nums.length)
-			{
-            if(nums[i]==nums[j] && (j-i)<=k)
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        HashMap<Integer,Integer>hs=new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(!hs.isEmpty() && hs.containsKey(nums[i]))
             {
-                data=true;
+                if(i-hs.get(nums[i])<=k)
+                return true;
             }
-            j++;
-			}
-		
-        else
-        {
-			i++;
-            j=i+1;
-            
+            hs.put(nums[i],i);
         }
-        if(data)
-        {
-            break;
-        }
-      }
-        System.out.println(data);
-}
+        return false;
+        
+    }
 }
